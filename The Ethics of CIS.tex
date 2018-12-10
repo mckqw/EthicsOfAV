@@ -1,0 +1,146 @@
+\documentclass[10pt]{article}
+
+%Packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{siunitx} % Required for alignment
+\usepackage{multirow} % Required for multirows
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{multicol}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{perpage} %the perpage package
+\MakePerPage{footnote} %the perpage package command
+
+
+%Subtitle
+\usepackage{titling}
+\newcommand{\subtitle}[1]{
+	\posttitle{
+		\par\end{center}
+		\begin{center}
+			\textit{\large#1}
+		\end{center}
+		\vskip0.5em}
+}
+
+%Changes the Abstract title
+\usepackage{abstract}
+%\renewcommand{\abstractname}{Prompt}% Change the title
+
+%Table Formatting
+\sisetup{
+  round-mode          = places, % Rounds numbers
+  round-precision     = 2, % to 2 places
+}
+
+\usepackage{geometry}
+\geometry{
+ 	a4paper,
+ 	total={170mm,257mm},
+ 	left=23mm,
+ 	right=23mm,
+ 	top=20mm,
+ }
+
+\setlength\parindent{2cm}
+
+\begin{document}	
+%TitlePage
+%: A Biblical Perspective
+\title{\textbf{The Ethics of Autonomous Vehicle Systems}}
+\subtitle{CIS 492 Computer Science Senior Seminar}
+\author{Matthew Clark}
+\date{April 13, 2018}
+\maketitle
+\pagenumbering{gobble}	
+\newpage
+
+\doublespacing
+\pagenumbering{gobble}
+\pagenumbering{arabic}
+
+\section{Introduction} %Why is exploring the ethics of this very specific field important?
+\paragraph{}
+In recent years, the exponential technological growth has begun to reach the final part of the curve where growth is rapidly expanding, or so it seams. Some of the technology produced in the past couple years have had questionable and unexplored ethical implications. For example, primarily drones once held the interest and fascination of hobbyists, however drones have become an awesome and powerful tool for unmanned military attacks. Alongside the rise of drones, the arrival of autonomous vehicles share in similar challenging ethical questions. This class, Computer Science Senior Seminar, requires not only a paper reflecting on ethical questions raised for specific computer science related topics, but also a 12 page research paper that prompts students to write on a technical topic of their interest. I chose to write on an object detection technique and explored how it could be used in an autonomous vehicle system. Thus it would seem fitting to also explore the ethical implications autonomous vehicles. The motivation behind this topic is not simply based on mutual interest, but also comes from a desire to further my journey in computer vision into a career. It would not be beneficial to merely supply personal supplications for presenting such a topic, 
+{\small \begin{quote}
+	\centering 
+	\textit{
+	considering the burst of enthusiasm, investment, and effort in autonomous vehicle technology---it is time to reflect.} \textsuperscript{\cite{Fleetwood2017}}
+\end{quote}}
+Many herald the realization of fully autonomous vehicles as the next great advancement in society, alongside the steam engine, horse-less carriages, or electricity. Those that are in support of the technology claim that the introduction of ``self-driving' vehicles will certainly reduce the amount of vehicle related accidents and deaths. They will supply statistics like the following: ``the National Highway Traffic Safety Administration found that 90\% of deaths on the road are caused by human error."\textsuperscript{\cite{Singh2015}} This of course is aimed at arguing that the end, less lives taken in accidents, justifies the means. This utilitarian view is a rather accepted approach to justifying the creation of such type of systems. This argument does not stop with autonomous vehicles and extends into the greater discourse of technological advancement. For if developing technology for the greater good results in greater evil, should "we" continue to advance technology? A powerful case study to answer such a question is exploring the justification, circumstances, and long-term effects that constitute the creation of the atomic bomb.
+
+\section{The Ethics of Technological Advancement}
+\paragraph{}
+The atomic bomb, one of the singularly greatest forces of destruction to have been conceived by mankind, is the antithesis to all ``enlightened" arguments for the goodness of mankind's ``creations". Up until World War Two, the western world had generally accepted Enlightenment and Progressive philosophy. The progressives upheld technological advancement and the progress of man to be the apex of man's greatness. Woodrow Wilson was one such example of a staunch believer in the progressive philosophy. Wilson employed social activism and political reform to better society. Wilson and much of America had hope in the goodness of man. An early figure-head of enlightenment philosophy described it as
+{\small \begin{quote}
+	\centering
+	\textit{...man's leaving his self-caused immaturity. Immaturity is the incapacity to use one's	intelligence without the guidance of another. Such immaturity is self-caused if it is not caused by lack of intelligence, but by lack of determination and courage to use one's intelligence without being guided by another. Sapere Aude! [Dare to know!] Have the courage to use your own intelligence is therefore the motto of the enlightenment}
+	\begin{flushright}
+		--- (Immanuel Kant 1784)\textsuperscript{\cite{Kant1804}}
+	\end{flushright}
+\end{quote}}
+In other words, the Enlightenment philosophers had hope in man's ability to be self-sufficient in all areas of life. There are clear problems with this line of reasoning, which is why enlightenment philosophy failed to stay prevalent to modern day. The atomic bomb and the nearly 80 million death toll of World War Two stands as a crushing reality for an enlightenment thinker to cope with. 
+\paragraph{}
+The men and women working on the atomic bomb began to realize the true impact these weapons would have on mankind. Nearly three months after the detonation of ``little boy" and ``fat man" on Hiroshima and Nagasaki J. Robert Oppenheimer, during his address to the Association of Los Alamos Scientists on November 2, 1945, reflected that
+{\small \begin{quote}
+	\centering
+	\textit{we are not only scientists; we are men, too. We cannot forget our dependence on our fellow men. I mean not only our material dependence, without which no science would be possible, and without which we could not work; I mean also our deep moral dependence, in that the value of science must lie in the world of men, that all our roots lie there. These are the strongest bonds in the world, stronger than those even that bind us to one another, these are the deepest bonds -- that bind us to our fellow men.}\textsuperscript{\cite{Oppenheimer1945}}
+\end{quote}}
+Oppenheimer's introspective words to the creators of the bomb juxtapose the lofty and high language of Kant well to show that man's self-sufficiency is really self-harm. The generals and officers spearheading the Manhattan Project explained that the creation of the bomb was for the greater good of ending the war. Yet Oppenheimer does not attempt to justify his actions, for he was fully conscious of the consequences of the bombing raids on Berlin, Dresden, Tokyo, among others; of the devestation of Hiroshima and Nagasaki; and of the role that scientists had played in these milestones.\textsuperscript{\cite{Schweber2007}} He realized the need of others but failed to recognize the deep philosophical impact the war and the bomb would have on western thought and culture. Those left in the aftermath of the slaughter, saw the result of the greatest product of mankind’s progression, weapons. Killing machines. They lost faith in man, and looked elsewhere for purpose. By 1950, most of the American culture was dominated by Christianity. The other percent of people began forming a different kind of belief, post-modernism. By the 60s and 70s, the culture took a dramatic turn. America went to war with Vietnam, segregation became an important issue, and Watergate shook the nation. People looked at the system, the Christian culture and the government, and did not live within it. People wanted to free themselves from their ties to the culture. As these thoughts and desires for freedom grew, the post-modern thought came into the scene. Many young people of the day accepted the ideas since it allowed them the ability to guiltlessly do what they pleased. For there was no truth to be found, they defined their own world.
+\paragraph{}
+How could have Oppenheimer known that creating an Atomic Bomb would spawn the Cold War and cause the rise of a very selfish philosophy? Was it Oppenheimer's fault for creating the bomb? Maybe the military officials pushing for the program's completion were to blame? Or even the pilot of the bomber is the wrongdoer? It is not as simple as many would like to think. At this point, the utilitarian would chime in to explain that despite the massive unintended consequences of the atomic bomb, the greater good for the most people was achieved. They suppose that if the bomb was not used, or even developed, the war would have dragged on for years. More people would have died and thus the bomb was justifiable. At this point one might reason that if guns and other military technology had not advanced, we would not have needed to deal with these complex issues; however, Germany's development into a military state due to power hungry leaders was one of the main causes for these wars. Therefore, one cannot assume that all men will seek the goodness for the most number of people nor will the idea of what is best can be shared. This is a problem. 
+
+\paragraph{}
+The \textit{Code of Ethics for Public Health} aims to deal with the problem of creating policies that account for the ``diverse values, beliefs, and cultures in the community"\cite{Fleetwood2017} by depending on the community's consent for their implementation. While this proposition seems fairly robust, how can one establish and trust a community that will provide reliable and totally consensual decisions?  The drivers of Los Angeles are a challenging counter-example. If there is a rather large accident on the freeway, people tend to slow down to look at what happened, causing more traffic. Most likely, drivers are conscious of the fact that slowing down on a highly congested freeway instead of keeping with the flow of traffic creates bottlenecking. Despite this fact, drivers look anyway. Thus the individual becomes more important than what is best for the entire group.
+\paragraph{}
+Who then can one trust? For Oppenheimer and the creation of the atomic bomb showed that man cannot be self-sufficient. Community may be a better option, but the greater good is often given up for the individual interests.
+{\small \begin{quote}
+	\centering
+	\textit{...when it came to purchasing an autonomous vehicle, respondents were significantly less likely to buy an autonomous vehicle if they and their family were passengers to be sacrificed in a forced-choice accident scenario than if they and their family members were not sacrificed for the greater good}\textsubscript{\cite{Fleetwood2017}\cite{Moral2016}}
+\end{quote}}
+\paragraph{}
+Therefore, every man ought to be virtuous, but by what standard? A self defined standard? A standard that most people agree on? At this point some may find themselves saying, ``Well, the world isn't perfect, so you should just do what works for you and try not to bother other people." This apathetic post-modern disposition denies interaction with others as the best option. The US held an isolationistic disposition during a large part of WWI (World War One) up until about 1940, and yet the US's aiding Europe from the beginning of WWI could have arguably prevented WWII and the deaths of close to 80,000,000 people. The honest words of Peter comes as a timely reminder:
+{\small \begin{quote}
+	\centering
+	\textit{After this many of his disciples turned back and no longer walked with him. So Jesus said to the twelve, “Do you want to go away as well?” Simon Peter answered him, “Lord, to whom shall we go? You have the words of eternal life, and we have believed, and have come to know, that you are the Holy One of God.”}\footnote{John 6:66-69 ESV}
+\end{quote}}
+\section{Challenging Autonomy}
+\paragraph{}
+Now that the groundwork has been laid, we will examine the most challenging ethical debates within autonomous vehicles, the trolley problem. The trolley problem has been around since 1967 and is a widely cited discussion for self-driving cars\textsuperscript{\cite{Fleetwood2017}} (see \cite{Moral2016}). Suppose there is a runaway trolley heading down a hill where 5 people are tied to the track at the bottom. A bystander has the choice between pulling the lever and sending the trolley down a track with one person tied to it or doing nothing. Does the bystander make the decision do nothing, feigning responsibility or choose to pull the lever to kill one over five? Look back to Oppenheimer's situation, how does the bystander know that killing one is greater than five? This mental-moral circus is too great for man to ascertain. Job found himself in a similar position:
+{\small \begin{quote}
+	\centering
+	\textit{
+		“Behold, my eye has seen all this,
+	my ear has heard and understood it.
+		What you know, I also know;
+	I am not inferior to you.
+		But I would speak to the Almighty,
+	and I desire to argue my case with God.}\footnote{Job 13:1-3 ESV}
+\end{quote}}
+Job's family and fortune had been stripped away and nothing was left to his name. So Job wished to say to God: ``where have I done wrong?" Maybe the bystander's children were tied to one line and the other was his wife. How could have he made a right decision? How could have the Lord allowed this to happen?
+
+{\small \begin{quote}
+	\centering
+	\textit{
+		So Satan went out from the presence of the LORD and struck Job with loathsome sores from the sole of his foot to the crown of his head. And he took a piece of broken pottery with which to scrape himself while he sat in the ashes.\\
+		Then his wife said to him, “Do you still hold fast your integrity? Curse God and die.” But he said to her, “You speak as one of the foolish women would speak. Shall we receive good from God, and shall we not receive evil\footnote{Also translated as ``calamity"}?” In all this Job did not sin with his lips.}\footnote{Job 2:7–10 ESV}
+\end{quote}}
+\section{Conclusion}
+\paragraph{}
+Therefore, should man be the one to make the decision? Maybe live and let God, right? The problem is that a choice still needs to be made and from that one cannot escape. Furthermore, the choice \textit{we} make must be based on God's virtues and not man's. The choices of autonomous vehicles, learning to prefer one option over another, are based on rules determined by a man. If that man designed the rules based on the ethics of the Bible, I would feel more at peace about the decision made by that car. I would not trust blindly but like the Jews in Berea\footnote{Acts 17:10-15}, examine the things presented before me daily to ensure that they were right and true.
+
+\newpage
+\pagenumbering{gobble}	
+\phantomsection 
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{../EthicsInCIS}
+\bibliographystyle{ieeetr}
+
+\end{document}
